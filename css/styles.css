@@ -328,7 +328,7 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
   border-radius: 4px; filter: brightness(0.88) saturate(0.9);
   transition: filter 0.3s;
 }
-.photo-strip img:nth-child(2) { object-position: center 65%; }
+.photo-strip img:nth-child(2) { object-position: center top; }
 .photo-strip img:hover { filter: brightness(1) saturate(1); }
 
 /* ── Pricing ── */
