@@ -320,7 +320,7 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
   background: var(--navy); padding: 3rem 0; overflow: hidden;
 }
 .photo-strip-inner {
-  display: grid; grid-template-columns: 1fr;
+  display: grid; grid-template-columns: 1fr 1fr;
   gap: 4px; max-width: 900px; margin: 0 auto; padding: 0 2rem;
 }
 .photo-strip img {
