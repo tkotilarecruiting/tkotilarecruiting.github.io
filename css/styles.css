@@ -540,45 +540,47 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
 /* ── FAQ ── */
 .faq { background: var(--off-white); }
 
-.faq-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.faq-list { margin-top: 0.5rem; border-top: 1px solid #dce6f0; }
 
-.faq-item {
-  background: var(--white); border-radius: 8px;
-  border: 1px solid #e2eaf2; overflow: hidden;
-}
+.faq-item { border-bottom: 1px solid #dce6f0; }
 
 .faq-question {
   width: 100%; background: none; border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; padding: 1.25rem 1.5rem; text-align: left;
+  gap: 1.5rem; padding: 1.1rem 0; text-align: left;
 }
 
 .faq-question span {
-  font-family: 'Oswald', sans-serif; font-size: 1rem;
-  font-weight: 500; color: var(--navy); letter-spacing: 0.02em;
-  line-height: 1.3;
+  font-size: 0.95rem; font-weight: 600; color: var(--navy);
+  line-height: 1.4;
 }
 
-.faq-chevron {
-  flex-shrink: 0; width: 20px; height: 20px; color: var(--silver);
-  transition: transform 0.25s;
-}
-
-.faq-item.open .faq-chevron { transform: rotate(180deg); }
-.faq-item.open { border-color: var(--silver); }
 .faq-item.open .faq-question span { color: var(--navy-light); }
+
+.faq-toggle {
+  flex-shrink: 0; width: 22px; height: 22px;
+  border-radius: 50%; border: 1.5px solid #c0cede;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gray); font-size: 0.9rem; line-height: 1;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  font-style: normal;
+}
+
+.faq-item.open .faq-toggle {
+  border-color: var(--navy-light); color: var(--white);
+  background: var(--navy-light);
+}
 
 .faq-answer {
   max-height: 0; overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 1.5rem;
+  transition: max-height 0.3s ease;
 }
 
-.faq-item.open .faq-answer { max-height: 600px; padding: 0 1.5rem 1.5rem; }
+.faq-item.open .faq-answer { max-height: 800px; padding-bottom: 1.25rem; }
 
 .faq-answer p {
-  font-size: 0.92rem; color: #4a5568; line-height: 1.8;
-  margin-bottom: 0.75rem;
+  font-size: 0.9rem; color: #4a5568; line-height: 1.8;
+  margin-bottom: 0.65rem;
 }
 .faq-answer p:last-child { margin-bottom: 0; }
 
@@ -588,25 +590,45 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
   border-radius: 0 4px 4px 0; margin-top: 0.75rem; line-height: 1.65;
 }
 
-/* ── Social Icons ── */
-.social-links {
-  display: flex; gap: 1rem; justify-content: center;
-  margin-bottom: 1.5rem;
+/* ── Social Links ── */
+.footer-social { margin-bottom: 1.75rem; }
+
+.footer-social-label {
+  font-family: 'Oswald', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gray); margin-bottom: 1rem;
 }
 
-.social-link {
+.social-rows { display: flex; flex-direction: column; gap: 0.6rem; align-items: center; }
+
+.social-row {
+  display: flex; align-items: center; gap: 0.75rem;
+  color: rgba(255,255,255,0.75); text-decoration: none;
+  font-size: 0.88rem; transition: color 0.2s;
+  padding: 0.4rem 0;
+}
+
+.social-row:hover { color: var(--silver); }
+
+.social-row-icon {
+  width: 28px; height: 28px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: var(--gray); transition: border-color 0.2s, color 0.2s, background 0.2s;
+  color: var(--silver);
 }
 
-.social-link:hover {
-  border-color: var(--silver); color: var(--silver);
-  background: rgba(168,188,207,0.08);
+.social-row-icon svg { width: 16px; height: 16px; fill: currentColor; }
+
+.social-row-name {
+  font-family: 'Oswald', sans-serif; font-weight: 500;
+  font-size: 0.85rem; color: inherit; letter-spacing: 0.04em;
+  min-width: 80px; text-align: left;
 }
 
-.social-link svg { width: 18px; height: 18px; fill: currentColor; }
+.social-row-desc {
+  font-size: 0.8rem; color: rgba(255,255,255,0.4);
+  border-left: 1px solid rgba(255,255,255,0.12);
+  padding-left: 0.75rem; text-align: left;
+}
 
 /* ── Mobile ── */
 @media (max-width: 900px) {
