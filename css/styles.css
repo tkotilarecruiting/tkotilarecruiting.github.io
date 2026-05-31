@@ -41,7 +41,7 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
 }
 
 .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--white); }
-.nav-logo-icon { width: 40px; height: 34px; color: var(--silver); }
+.nav-logo-icon { width: 36px; height: 36px; color: var(--silver); }
 .nav-logo-text {
   font-size: 1.05rem; font-weight: 600; color: var(--white);
   text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.2;
@@ -87,7 +87,7 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
 .hero-content { position: relative; max-width: 800px; }
 
 .hero-logo {
-  width: 90px; height: 76px; color: var(--silver);
+  width: 80px; height: 80px; color: var(--silver);
   margin: 0 auto 1.5rem;
   filter: drop-shadow(0 0 20px rgba(168,188,207,0.35));
 }
@@ -514,7 +514,7 @@ h1, h2, h3, h4, .nav-logo-text, .hero-title {
   display: flex; align-items: center; justify-content: center;
   gap: 12px; margin-bottom: 0.75rem;
 }
-.footer-logo-icon { width: 32px; height: 27px; color: var(--silver); }
+.footer-logo-icon { width: 30px; height: 30px; color: var(--silver); }
 .footer-logo-text {
   font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600;
   color: var(--white); text-transform: uppercase; letter-spacing: 0.1em;
